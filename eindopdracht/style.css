@@ -105,7 +105,7 @@ section > img {
 	max-width: 40em;
 }
 
-video {
+video, iframe {
 	width: 100%;
 	min-width: 17em;
 	max-width: 40em;
@@ -141,7 +141,7 @@ aside {
 }
 
 aside > section {
-	width: 44%;
+	width: 100%;
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 5%;
@@ -156,6 +156,10 @@ footer {
 	width: 90%;
 	margin: auto;
 	background: #f16723;
+}
+
+footer h1 {
+	font-size: 1.3em;
 }
 
 footer > section {
@@ -176,21 +180,20 @@ aside h2 {
 	margin-bottom: .3em;
 }
 
-
-@media screen and (max-width: 400px){
-	aside > section {
-		width: 100%;
-	}
-}	
-
 fieldset {
 	width: 50%;
 	padding: .5em;
 	margin-bottom: 1em;
+	min-width: 16em;
+	border: .1em solid #f16723;
 }
 
 fieldset:nth-of-type(3), fieldset:nth-of-type(4){
 	display: none;
+}
+
+footer section:nth-of-type(3){
+	text-align: center;
 }
 
 fieldset input, fieldset label {
@@ -198,10 +201,40 @@ fieldset input, fieldset label {
 	width: 45%;
 	margin-bottom: .3em;
 	margin-right: .5em;
+	min-width: 7em;
+}
+
+input:focus{
+	outline: none !important;
+    border: .2em solid  #f16723;
+}
+
+iframe {
+	display: none;
+}
+
+.no-video video {
+	display: none;
+}
+
+.no-video iframe {
+	display: block;
 }
 
 
-@media screen and (min-width: 960px){
+@media screen and (min-width: 600px){
+	aside > section {
+		width: 44%;
+	}
+
+	footer section:nth-of-type(1), footer section:nth-of-type(2){
+	width: 43%;
+	display: inline-block;
+	vertical-align: top;
+	}
+}	
+
+@media screen and (min-width: 900px){
 	header img:nth-of-type(2){
 		display: none;
 	}
