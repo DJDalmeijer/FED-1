@@ -9,13 +9,17 @@
 	font-family: Lato-Normal;
 }
 
+.no-fontface {
+	font-family: Comic Sans MS; /* evil font is evil :); */
+}
+
 body {
 	width: 95%;
 	margin: auto;
 	margin-top: 1em;
 	padding: .7em;
 	position: relative;
-	max-width: 60em;
+	max-width: 65em;
 }
 
 header {
@@ -24,15 +28,14 @@ header {
 	position: relative;
 }
 
-header img {
+header img:nth-of-type(1) {
 	width: 45%;
 	min-width: 12.5em;
 	max-width: 20.5em;
 }
 
 header img:nth-of-type(2){
-	max-width: 30px;
-	min-width: 30px;
+	width: 1.875em;
 	float: right;
 	margin-top: 1em;
 	position: absolute;
@@ -96,7 +99,7 @@ section > h1, aside > h1 {
 }
 
 section p {
-	margin-bottom: .6em;
+	margin-bottom: 1.5em;
 }
 
 section > img {
@@ -205,24 +208,20 @@ fieldset input, fieldset label {
 }
 
 input:focus{
-	outline: none !important;
-    border: .2em solid  #f16723;
-}
-
-iframe {
-	display: none;
-}
-
-.no-video video {
-	display: none;
-}
-
-.no-video iframe {
-	display: block;
+	outline: .2em solid  #f16723;
 }
 
 
-@media screen and (min-width: 600px){
+input[type="radio"] {
+	outline: none;
+	cursor: pointer;
+}
+
+fieldset:nth-of-type(n+3) label , fieldset:nth-of-type(n+3) input{
+	width: 90%;
+}
+
+@media screen and (min-width: 37.5em){
 	aside > section {
 		width: 44%;
 	}
@@ -231,16 +230,23 @@ iframe {
 	width: 43%;
 	display: inline-block;
 	vertical-align: top;
-	}
+	}		
 }	
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 53.313em){
+	fieldset:nth-of-type(n+3) label , fieldset:nth-of-type(n+3) input{
+	width: 45%;
+	}
+}
+
+
+@media screen and (min-width: 56.25em){
 	header img:nth-of-type(2){
 		display: none;
 	}
 	
 	nav {
-		display: block;
+		display: block !important;
 		padding: 0;
 		background: white;
 	}
