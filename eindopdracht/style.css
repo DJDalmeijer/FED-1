@@ -1,3 +1,4 @@
+/*General styles*/
 @font-face {
 	font-family: Lato-Normal;
 	src: url(fonts/Lato-Normal.ttf);
@@ -13,6 +14,7 @@
 	font-family: Comic Sans MS; /* evil font is evil :); */
 }
 
+/*mobile Layout */
 body {
 	width: 95%;
 	margin: auto;
@@ -21,10 +23,6 @@ body {
 	position: relative;
 	max-width: 65em;
 	font-size: 1em;
-}
-
-p {
-	
 }
 
 header {
@@ -86,6 +84,10 @@ nav ul a {
 	border-radius: .15em;
 }
 
+nav a:hover {
+	text-decoration: none;
+}
+
 ul:nth-of-type(2){
 	font-size: .8em;
 	border-bottom: 0;
@@ -115,10 +117,15 @@ section p {
 	margin-bottom: 1.5em;
 }
 
-section > img {
+section img {
 	width: 90%;
 	margin-bottom: .6em;
 	max-width: 40em;
+	box-shadow: .35em .35em .7em #999999;
+}
+
+.no-boxshadow section img {
+	border: .15em solid #999999;
 }
 
 video {
@@ -136,10 +143,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-nav a:hover {
-	text-decoration: none;
-}
-
 section > ol lh {
 	font-size: 1.05em;
 }
@@ -147,6 +150,8 @@ section > ol lh {
 section > ol li{
 	margin-left: 1.5em;
 }
+
+/*Aside styles*/
 
 aside {
 	width: 90%;
@@ -167,6 +172,13 @@ aside > h1{
 	margin-top: 1em;
 }
 
+aside h2 {
+	font-size: 1em;
+	margin-bottom: .3em;
+}
+
+/*Footer styles*/
+
 footer {
 	width: 90%;
 	margin: auto;
@@ -179,12 +191,14 @@ footer h1 {
 
 footer ul, footer ul ul:nth-of-type(2) {
 	font-size: 1em;
-	padding: 1.3em;
+	padding-left: 1.3em;
+	padding-bottom: .5em;
 	
 }
 
 footer ul > li {
 	font-weight: 400;
+	padding-bottom: .5em;	
 }
 
 footer ul ul, footer ul ul:nth-of-type(2)  {
@@ -192,6 +206,7 @@ footer ul ul, footer ul ul:nth-of-type(2)  {
 }
  
 footer ul ul li {
+	padding-bottom: .5em;
 	font-weight: 100;
 } 
 
@@ -208,11 +223,7 @@ footer > section, footer > section > h1 {
 	margin-top: .1em;
 }
 
-aside h2 {
-	font-size: 1em;
-	margin-bottom: .3em;
-}
-
+/*Form styles*/
 fieldset {
 	width: 50%;
 	padding: .5em;
@@ -250,6 +261,8 @@ fieldset:nth-of-type(n+3) label , fieldset:nth-of-type(n+3) input{
 	width: 90%;
 }
 
+/*tablet/small desktop styles*/
+
 @media screen and (min-width: 37.5em){
 	aside > section {
 		width: 44%;
@@ -261,6 +274,8 @@ fieldset:nth-of-type(n+3) label , fieldset:nth-of-type(n+3) input{
 		vertical-align: top;
 	}	
 }	
+
+/*desktop styles*/
 
 @media screen and (min-width: 53.313em){
 	fieldset:nth-of-type(n+3) label , fieldset:nth-of-type(n+3) input{
