@@ -20,6 +20,11 @@ body {
 	padding: .7em;
 	position: relative;
 	max-width: 65em;
+	font-size: 1em;
+}
+
+p {
+	
 }
 
 header {
@@ -47,6 +52,10 @@ header img {
 	vertical-align: bottom;
 }
 
+header img:nth-of-type(2){
+	width: 1.875em;
+}	
+
 nav {
 	width: 90%;
 	margin: auto;
@@ -63,6 +72,10 @@ nav ul {
 	margin: auto;
 	border-bottom: .15em solid white;
 	margin-bottom: .5em;
+}
+
+nav li {
+	display: inline-block;
 }
 
 nav ul a {
@@ -108,7 +121,7 @@ section > img {
 	max-width: 40em;
 }
 
-video, iframe {
+video {
 	width: 100%;
 	min-width: 17em;
 	max-width: 40em;
@@ -127,9 +140,8 @@ nav a:hover {
 	text-decoration: none;
 }
 
-section > ol h1 {
-	margin-bottom: 10px;
-	font-size: 1em;
+section > ol lh {
+	font-size: 1.05em;
 }
 
 section > ol li{
@@ -165,6 +177,24 @@ footer h1 {
 	font-size: 1.3em;
 }
 
+footer ul, footer ul ul:nth-of-type(2) {
+	font-size: 1em;
+	padding: 1.3em;
+	
+}
+
+footer ul > li {
+	font-weight: 400;
+}
+
+footer ul ul, footer ul ul:nth-of-type(2)  {
+	color: white;
+}
+ 
+footer ul ul li {
+	font-weight: 100;
+} 
+
 footer > section {
 	padding: 1em;
 }
@@ -195,7 +225,7 @@ fieldset:nth-of-type(3), fieldset:nth-of-type(4){
 	display: none;
 }
 
-footer section:nth-of-type(3){
+footer section:nth-of-type(4){
 	text-align: center;
 }
 
@@ -211,7 +241,6 @@ input:focus{
 	outline: .2em solid  #f16723;
 }
 
-
 input[type="radio"] {
 	outline: none;
 	cursor: pointer;
@@ -226,11 +255,11 @@ fieldset:nth-of-type(n+3) label , fieldset:nth-of-type(n+3) input{
 		width: 44%;
 	}
 
-	footer section:nth-of-type(1), footer section:nth-of-type(2){
-	width: 43%;
-	display: inline-block;
-	vertical-align: top;
-	}		
+	footer section:nth-of-type(-1n+3){
+		width: 43%;
+		display: inline-block;
+		vertical-align: top;
+	}	
 }	
 
 @media screen and (min-width: 53.313em){
@@ -261,6 +290,12 @@ fieldset:nth-of-type(n+3) label , fieldset:nth-of-type(n+3) input{
 	nav ul a {
 		background: #f16723;
 		color: white;
+	}
+
+	nav a:hover {
+		box-shadow: 0 0 0 .15em #f16723 inset;
+		color: #f16723;
+		background: white;
 	}
 	
 	nav ul:nth-of-type(2) a {
